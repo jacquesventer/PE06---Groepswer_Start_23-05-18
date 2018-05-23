@@ -10,3 +10,8 @@ D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\M
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.csproj.CoreCompileInputs.cache
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.dll
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.pdb
+C:\projects\ivo\PE6\MailingList.Lib\bin\Debug\MailingList.Lib.dll
+C:\projects\ivo\PE6\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
+C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.csprojResolveAssemblyReference.cache
+C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.dll
+C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.pdb

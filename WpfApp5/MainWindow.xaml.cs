@@ -55,7 +55,7 @@ namespace WpfApp5
             Deelnemer deelnemerTrue = new Deelnemer();
             deelnemerTrue.Id = 0;
             deelnemerTrue.FirstName = txtFirstName.Text;
-            deelnemerTrue.LastName = txtFirstName.Text;
+            deelnemerTrue.LastName = txtLastName.Text;
             deelnemerTrue.Email = txtEmail.Text;
             deelnemerTrue.Phone = Int32.Parse(txtPhone.Text);
             deelnemerTrue.Street = txtStreet.Text;
@@ -84,7 +84,7 @@ namespace WpfApp5
             Deelnemer deelnemerFalse = new Deelnemer();
             deelnemerFalse.Id = 0;
             deelnemerFalse.FirstName = txtFirstName.Text;
-            deelnemerFalse.LastName = txtFirstName.Text;
+            deelnemerFalse.LastName = txtLastName.Text;
             deelnemerFalse.Email = txtEmail.Text;
             deelnemerFalse.Phone = Int32.Parse(txtPhone.Text);
             deelnemerFalse.Street = txtStreet.Text;
@@ -111,7 +111,7 @@ namespace WpfApp5
             Deelnemer deelnemerFalse = new Deelnemer();
             deelnemerFalse.Id = 0;
             deelnemerFalse.FirstName = txtFirstName.Text;
-            deelnemerFalse.LastName = txtFirstName.Text;
+            deelnemerFalse.LastName = txtLastName.Text;
             deelnemerFalse.Email = txtEmail.Text;
             deelnemerFalse.Phone = Int32.Parse(txtPhone.Text);
             deelnemerFalse.Street = txtStreet.Text;

@@ -16,3 +16,19 @@ D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-maste
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\WpfApp5\obj\Debug\WpfApp5.pdb
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csprojAssemblyReference.cache
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.CopyComplete
+C:\projects\ivo\PE6\WpfApp5\bin\Debug\WpfApp5.exe.config
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.exe
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.pdb
+C:\projects\ivo\PE6\WpfApp5\bin\Debug\WpfApp5.exe
+C:\projects\ivo\PE6\WpfApp5\bin\Debug\WpfApp5.pdb
+C:\projects\ivo\PE6\WpfApp5\bin\Debug\MailingList.Lib.dll
+C:\projects\ivo\PE6\WpfApp5\bin\Debug\MailingList.Lib.pdb
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csprojResolveAssemblyReference.cache
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\MainWindow.g.cs
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\App.g.cs
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\MainWindow.baml
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.g.resources
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
+C:\projects\ivo\PE6\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.GenerateResource.Cache

@@ -10,7 +10,7 @@ namespace MailingList.Lib.Services
 {
     public class DeelnemerServices
     {
-        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "MailingList.accdb";
+        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "../../../MailingList.accdb";
         public List<Deelnemer> deelnemers;
         public List<Deelnemer> winnaars;
         OleDbConnection dbConn;
@@ -20,6 +20,8 @@ namespace MailingList.Lib.Services
         {
             dbConn = new OleDbConnection();
             dbConn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + bestandsPad;
+            deelnemers = new List<Deelnemer>();
+            winnaars = new List<Deelnemer>();
         }
 
         public bool ImportData()
@@ -191,13 +193,13 @@ namespace MailingList.Lib.Services
             if (deelnemer.Id == 0)
             {
                 insertDeelnemer = $"INSERT INTO tblMailingList " +
-                  $"(FirstName, LastName, Email, Phone, Street, StreetNumber, City, PostalCode) values" +
-                  $"('{deelnemer.FirstName}', '{deelnemer.LastName}', '{deelnemer.Email}', '{deelnemer.Phone}', '{deelnemer.Street}', '{deelnemer.StreetNumber}', '{deelnemer.City}', '{deelnemer.PostalCode}')";
+                  $"(FirstName, LastName, Email, Phone, Street, StreetNumber, City, PostalCode, Answer) values " +
+                  $"('{deelnemer.FirstName}', '{deelnemer.LastName}', '{deelnemer.Email}', '{deelnemer.Phone}', '{deelnemer.Street}', '{deelnemer.StreetNumber}', '{deelnemer.City}', '{deelnemer.PostalCode}', '{deelnemer.Answer}')";
             }
             else
             {
                 insertDeelnemer = $"INSERT INTO tblMailingList " +
-                     $"(FirstName, LastName, Email, Phone, Street, StreetNumber, City, PostalCode, Answer) values" +
+                     $"(Id, FirstName, LastName, Email, Phone, Street, StreetNumber, City, PostalCode, Answer) values " +
                      $"({deelnemer.Id}, '{deelnemer.FirstName}', '{deelnemer.LastName}', '{deelnemer.Email}', '{deelnemer.Phone}', '{deelnemer.Street}', '{deelnemer.StreetNumber}', '{deelnemer.City}', '{deelnemer.PostalCode}', '{deelnemer.Answer}')";
             }
             try

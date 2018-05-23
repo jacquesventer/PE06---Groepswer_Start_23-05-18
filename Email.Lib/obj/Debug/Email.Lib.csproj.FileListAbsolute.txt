@@ -3,3 +3,8 @@ D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-maste
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\Email.Lib\bin\Debug\Email.Lib.pdb
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\Email.Lib\obj\Debug\Email.Lib.dll
 D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\Email.Lib\obj\Debug\Email.Lib.pdb
+C:\projects\ivo\PE6\Email.Lib\bin\Debug\Email.Lib.dll
+C:\projects\ivo\PE6\Email.Lib\bin\Debug\Email.Lib.pdb
+C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.csprojResolveAssemblyReference.cache
+C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.dll
+C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.pdb
