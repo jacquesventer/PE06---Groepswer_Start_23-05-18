@@ -1,0 +1,12 @@
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\bin\Debug\MailingList.Lib.dll
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.csproj.CoreCompileInputs.cache
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.dll
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.pdb
+D:\HBO5\programmeren 17-18\PE06\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.csprojAssemblyReference.cache
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\bin\Debug\MailingList.Lib.dll
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.csprojAssemblyReference.cache
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.dll
+D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Lib\obj\Debug\MailingList.Lib.pdb
