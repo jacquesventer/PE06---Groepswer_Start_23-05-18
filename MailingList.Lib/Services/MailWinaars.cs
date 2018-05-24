@@ -26,12 +26,13 @@ namespace MailingList.Lib.Services
         {
             if (dbConn != null) { dbConn.Close(); }
         }
-
+         
         public bool SelecteerWinaar()
         {
             bool gelukt = false;
             OleDbDataReader dbRead = null;
-            string sqlopdracht = "select * FROM tblMailingList WHERE Answer = true ";
+            bool answer = true;
+            string sqlopdracht = "select * FROM tblMailingList WHERE Answer =" + answer;
             try
             {
                 dbConn.Open();
@@ -68,5 +69,18 @@ namespace MailingList.Lib.Services
             }
             return gelukt;
         }
+        public string OpmaakEmail(Deelnemer winnaar)
+        {
+            string rapport = paragraph("Beste, " + winnaar.LastName + " " + winnaar.FirstName);
+            return rapport;
+                
+        }
+
+        static string paragraph(string input)
+        {
+            string html = $"<p>{input}</p>";
+            return html;
+        }
+
     }
 }

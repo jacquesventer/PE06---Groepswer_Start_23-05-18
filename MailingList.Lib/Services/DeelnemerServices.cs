@@ -10,9 +10,9 @@ namespace MailingList.Lib.Services
 {
     public class DeelnemerServices
     {
-        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "MailingList.accdb";
-        public List<Deelnemer> deelnemers;
-        public List<Deelnemer> winnaars;
+        public static string bestandsPad;
+        public static List<Deelnemer> deelnemers;
+       // public List<Deelnemer> winnaars;
         OleDbConnection dbConn;
         OleDbCommand sqlCommand;
 
@@ -20,6 +20,12 @@ namespace MailingList.Lib.Services
         {
             dbConn = new OleDbConnection();
             dbConn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + bestandsPad;
+            if (deelnemers == null)
+            {
+                deelnemers = new List<Deelnemer>();
+                ImportData();
+            }
+
         }
 
         public bool ImportData()
@@ -155,22 +161,25 @@ namespace MailingList.Lib.Services
         private bool DbWijzig(Deelnemer deelnemer)
         {
             bool gewijzigd = true;
+             
             try
             {
-                string updateDeelnemer =
-                    $"UPDATE tblMailingList SET " +
-                    $"FirstName = '{deelnemer.FirstName}', " +
-                    $"LastName = '{deelnemer.LastName}',  " +
-                    $"Email = '{deelnemer.Email}', " +
-                    $"Phone = {deelnemer.Phone}, " +
-                    $"Street = '{deelnemer.Street}', " +
-                    $"StreetNumber = {deelnemer.StreetNumber}, " +
-                    $"City = '{deelnemer.City}', " +
-                    $"PostalCode = {deelnemer.PostalCode}, " +
-                    $"WHERE id = {deelnemer.Id}";
-                dbConn.Open();
-                sqlCommand = new OleDbCommand(updateDeelnemer, dbConn);
-                sqlCommand.ExecuteNonQuery();
+                //    string updateDeelnemer =
+                //    $"UPDATE tblMailingList SET " +
+                //    $"FirstName = '{deelnemer.FirstName}', " +
+                //    $"LastName = '{deelnemer.LastName}',  " +
+                //    $"Email = '{deelnemer.Email}', " +
+                //    $"Phone = {deelnemer.Phone}, " +
+                //    $"Street = '{deelnemer.Street}', " +
+                //    $"StreetNumber = {deelnemer.StreetNumber}, " +
+                //    $"City = '{deelnemer.City}', " +
+                //    $"PostalCode = {deelnemer.PostalCode}, " +
+                //    $"WHERE id = {deelnemer.Id}";
+                //dbConn.Open();
+                //sqlCommand = new OleDbCommand(updateDeelnemer, dbConn);
+                //sqlCommand.ExecuteNonQuery();
+                DbVerwijder(deelnemer);
+                DbVoegToe(deelnemer);
             }
             catch (Exception ex)
             {

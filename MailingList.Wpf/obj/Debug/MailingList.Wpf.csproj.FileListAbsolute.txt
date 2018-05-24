@@ -38,3 +38,23 @@ D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\M
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CopyComplete
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Wpf\obj\Debug\MailingList.Wpf.exe
 D:\Visual Studio 2017\Source\PE06---Groepswerk-master\PE06---Groepswerk-master\MailingList.Wpf\obj\Debug\MailingList.Wpf.pdb
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\MailingList.Wpf.exe.config
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\MailingList.Wpf.exe
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\MailingList.Wpf.pdb
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\Email.Lib.dll
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\MailingList.Lib.dll
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\Email.Lib.pdb
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\bin\Debug\MailingList.Lib.pdb
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.csprojAssemblyReference.cache
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MainWindow.g.cs
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\App.g.cs
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf_MarkupCompile.cache
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf_MarkupCompile.lref
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MainWindow.baml
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.g.resources
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.Properties.Resources.resources
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.GenerateResource.cache
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CoreCompileInputs.cache
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CopyComplete
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.exe
+C:\Users\diego\Source\Repos\PE06---Groepswer_Start_23-05-18\MailingList.Wpf\obj\Debug\MailingList.Wpf.pdb

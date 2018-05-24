@@ -26,12 +26,14 @@ namespace WpfApp5
     /// </summary>
     public partial class MainWindow : Window
     {
-        DeelnemerServices beheerDeelnemers = new DeelnemerServices();
+        DeelnemerServices beheerDeelnemers;
         bool answer = false;
 
         public MainWindow()
         {
             InitializeComponent();
+            DeelnemerServices.bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "MailingList.accdb";
+            beheerDeelnemers = new DeelnemerServices();
         }
 
 
@@ -52,28 +54,39 @@ namespace WpfApp5
             //Vindt inderdaad de database file niet zoals jacques vermoedde
             answer = true;
 
-            Deelnemer deelnemerTrue = new Deelnemer();
-            deelnemerTrue.Id = 0;
-            deelnemerTrue.FirstName = txtFirstName.Text;
-            deelnemerTrue.LastName = txtFirstName.Text;
-            deelnemerTrue.Email = txtEmail.Text;
-            deelnemerTrue.Phone = Int32.Parse(txtPhone.Text);
-            deelnemerTrue.Street = txtStreet.Text;
-            deelnemerTrue.StreetNumber = Int32.Parse(txtStreetNumber.Text);
-            deelnemerTrue.City = txtCity.Text;
-            deelnemerTrue.PostalCode = Int32.Parse(txtPostalCode.Text);
-            deelnemerTrue.Answer = answer.ToString();
-            if (!beheerDeelnemers.NieuwDeelnemer(deelnemerTrue))
-            {
-                MessageBox.Show("Fout bij ingave, gegevens konden niet verwerkt worden");
+           // Deelnemer deelnemerTrue = new Deelnemer();
+         //   deelnemerTrue.Id = 0;
+           // deelnemerTrue.FirstName = txtFirstName.Text;
+          //  deelnemerTrue.LastName = txtLastName.Text;
+          //  deelnemerTrue.Email = txtEmail.Text;
+            //deelnemerTrue.Phone = Int32.Parse(txtPhone.Text);
+            //deelnemerTrue.Street = txtStreet.Text;
+            //deelnemerTrue.StreetNumber = Int32.Parse(txtStreetNumber.Text);
+            //deelnemerTrue.City = txtCity.Text;
+            //deelnemerTrue.PostalCode = Int32.Parse(txtPostalCode.Text);
+            //deelnemerTrue.Answer = answer.ToString();
+            //if (!beheerDeelnemers.NieuwDeelnemer(deelnemerTrue))
+            //{
+            //    MessageBox.Show("Fout bij ingave, gegevens konden niet verwerkt worden");
 
+            //}
+            //else
+            //{
+             //   MessageBox.Show("Bedankt voor je deelname!");
+               // MaakVeldenDeelnemersLeeg();
+            //}
+            Deelnemer newparticipant = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text,
+                Int32.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text),answer.ToString());
+            if (!beheerDeelnemers.NieuwDeelnemer(newparticipant))
+            {
+                MessageBox.Show("De gegevens zijn niet opgeslagen");
             }
             else
             {
-                MessageBox.Show("Bedankt voor je deelname!");
                 MaakVeldenDeelnemersLeeg();
+                txtFirstName.Focus();
             }
-
+         
         }
 
 
