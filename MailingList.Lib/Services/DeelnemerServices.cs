@@ -48,6 +48,7 @@ namespace MailingList.Lib.Services
                     deelnemers.Add(deelnemer);
                 }
                 gelukt = true;
+                
             }
             catch (Exception ex)
             {
@@ -61,7 +62,9 @@ namespace MailingList.Lib.Services
                 }
                 SluitConnectie();
             }
+            SorteerDeelnemers();
             return gelukt;
+            
         }
 
         public bool NieuwDeelnemer(Deelnemer deelnemer)
@@ -234,6 +237,38 @@ namespace MailingList.Lib.Services
                 SluitConnectie();
             }
             return id;
+        }
+
+        string MaakSorteerSleutel(Deelnemer deelnemer)
+        {
+            string sorteerSleutel = "";
+            sorteerSleutel = deelnemer.LastName + "," + deelnemer.FirstName;
+            sorteerSleutel = sorteerSleutel.ToUpper();
+            sorteerSleutel = sorteerSleutel.Replace(' ', '\0');
+            return sorteerSleutel;
+        }
+
+         void SorteerDeelnemers()
+        {
+            List<string> teSorteren = new List<string>();
+            foreach (Deelnemer deelnemer in deelnemers)
+            {
+                teSorteren.Add(MaakSorteerSleutel(deelnemer));
+            }
+            teSorteren.Sort();
+            List<Deelnemer> gesorteerd = new List<Deelnemer>();
+            foreach (string sorteerNaam in teSorteren)
+            {
+                foreach (Deelnemer _deelnemer in deelnemers)
+                {
+                    if (sorteerNaam == MaakSorteerSleutel(_deelnemer))
+                    {
+                        gesorteerd.Add(_deelnemer);
+                        break;
+                    }
+                }
+            }
+            deelnemers = gesorteerd;
         }
 
         void SluitConnectie()
