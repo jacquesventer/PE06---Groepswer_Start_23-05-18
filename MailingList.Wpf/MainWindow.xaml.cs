@@ -153,19 +153,6 @@ namespace MailingList.Wpf
             int indexWinnaar = rd.Next(0, beheerWinaars.winnaars.Count());
             lstMailingList.SelectedIndex = indexWinnaar;
         }
-    //    void SelecteerWinaarList()
-        //{
-        //    Random rd = new Random();
-        //    int indexWinnaar = rd.Next(0, beheerWinaars.winnaars.Count());
-            
-        //    beheerWinaars.winnaars = new List<Deelnemer>();
-        //    beheerWinaars.SelecteerWinaar();
-
-        //    lstMailingList.ItemsSource = beheerWinaars.winnaars;
-        //    lstMailingList.Items.Refresh();
-        //    lstMailingList.SelectedIndex = indexWinnaar;
-
-        //}
         private void btnChooseWinner_Click(object sender, RoutedEventArgs e)
         {
             deelnemer_Sel = (Deelnemer)lstMailingList.SelectedValue;
