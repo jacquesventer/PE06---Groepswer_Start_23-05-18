@@ -10,7 +10,7 @@ namespace MailingList.Lib.Services
 {
     public class MailWinaars
     {
-        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "MailingList.accdb";
+        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "../../../MailingList.accdb";
         public List<Deelnemer> winnaars;
         OleDbConnection dbConn;
         OleDbCommand sqlCommand;
@@ -19,6 +19,7 @@ namespace MailingList.Lib.Services
         {
                 dbConn = new OleDbConnection();
                 dbConn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + bestandsPad;
+            winnaars = new List<Deelnemer>();
         }
 
 
@@ -67,6 +68,18 @@ namespace MailingList.Lib.Services
                 SluitConnectie();
             }
             return gelukt;
+        }
+        public string OpmaakEmail(Deelnemer winnaar)
+        {
+            string rapport = paragraph("Beste, " + winnaar.LastName + " " + winnaar.FirstName);
+            return rapport;
+
+        }
+
+        static string paragraph(string input)
+        {
+            string html = $"<p>{input}</p>";
+            return html;
         }
     }
 }
