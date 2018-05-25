@@ -32,7 +32,7 @@ namespace MailingList.Lib.Services
         {
             bool gelukt = false;
             OleDbDataReader dbRead = null;
-            string sqlopdracht = "select * FROM tblMailingList WHERE Answer = true ";
+            string sqlopdracht = "select * FROM tblMailingList WHERE Answer = 'true' ";
             try
             {
                 dbConn.Open();
@@ -103,7 +103,7 @@ namespace MailingList.Lib.Services
         }
         public string OpmaakEmail(Deelnemer winnaar)
         {
-            string rapport = paragraph("Beste, " + winnaar.LastName + " " + winnaar.FirstName);
+            string rapport = paragraph("Beste, <br>" + winnaar.LastName + " " + winnaar.FirstName);
             return rapport;
 
         }

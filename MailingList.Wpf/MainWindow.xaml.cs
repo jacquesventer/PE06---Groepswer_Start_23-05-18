@@ -98,7 +98,7 @@ namespace MailingList.Wpf
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             
-            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, int.Parse(txtPhone.Text),
+            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, long.Parse(txtPhone.Text),
                 txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.WijzigDeelnemer(participant))
             {
@@ -114,7 +114,7 @@ namespace MailingList.Wpf
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
             Deelnemer newparticipant = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text,
-                int.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
+                long.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.NieuwDeelnemer(newparticipant))
             {
                 MessageBox.Show("De gegevens zijn niet opgeslagen");
@@ -145,7 +145,7 @@ namespace MailingList.Wpf
 
         private void btnSendNewsLetter_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
         void SelecteerWinaarList()
         {
