@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
         Title="Questionnaire" Height="766" Width="800" TabIndex="123456789">
-    <Grid>
+    <Grid x:Name="grdTop">
         <Label x:Name="label" Content="Fill out this form and choose the correct answer for a chance to win*." HorizontalAlignment="Left" Margin="60,128,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF6A6969" FontSize="14" Width="501"/>
         <Label x:Name="label1" Content="Enter Our Contest!" HorizontalAlignment="Left" Margin="60,90,0,0" VerticalAlignment="Top" Width="249" FontFamily="Segoe UI Black" FontSize="22" TextOptions.TextHintingMode="Fixed" Foreground="#FF6A6969"/>
         <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="65,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" TabIndex="1"/>

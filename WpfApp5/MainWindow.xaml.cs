@@ -15,8 +15,7 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using MailingList.Lib.Entities;
 using MailingList.Lib.Services;
-
-
+using InputControl.Lib;
 
 
 namespace WpfApp5
@@ -28,12 +27,16 @@ namespace WpfApp5
     {
         DeelnemerServices beheerDeelnemers = new DeelnemerServices();
         bool answer = false;
+        TextBoxControl beheerControls = new TextBoxControl();
 
         public MainWindow()
         {
             InitializeComponent();
+            SpecialeControls();
+            EnableDisableButtons(false);
+            ValidatieDeelnemer(grdTop);
+            beheerControls.AlleTextBoxenNormaal();
         }
-
 
         void MaakVeldenDeelnemersLeeg()
         {
@@ -45,24 +48,94 @@ namespace WpfApp5
             txtStreetNumber.Clear();
             txtCity.Clear();
             txtPostalCode.Clear();
+            beheerControls.AlleTextBoxenNormaal();
+            EnableDisableButtons(false);
         }
+
+        void SpecialeControls()
+        {
+            beheerControls.nietLeeg = new List<TextBox>();
+            beheerControls.nietLeeg.Add(txtCity);
+            beheerControls.nietLeeg.Add(txtFirstName);
+            beheerControls.nietLeeg.Add(txtLastName);
+            beheerControls.nietLeeg.Add(txtPostalCode);
+            beheerControls.nietLeeg.Add(txtStreet);
+            beheerControls.nietLeeg.Add(txtStreetNumber);
+            beheerControls.SetupControleLeeg();
+
+            beheerControls.adresInput = new List<TextBox>();
+            beheerControls.adresInput.Add(txtEmail);
+            beheerControls.SetupControleEmailAdres();
+
+            beheerControls.intInput = new List<TextBox>();
+            beheerControls.intInput.Add(txtStreetNumber);
+            beheerControls.SetupControleInt();
+        }
+
+        private void ControleDeelnemer(object sender, RoutedEventArgs e)
+        {
+            bool veldenOk = true;
+            int huisNr;
+
+            if (txtCity.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtFirstName.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtLastName.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtPostalCode.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtStreet.Text == "") veldenOk = false;
+            else if ( int.TryParse(txtStreetNumber.Text.ToString(), out huisNr)  == false ) veldenOk = false;
+            else if ( beheerControls.CheckEmailAdres(txtEmail.Text.ToString()) == false ) veldenOk = false;
+
+            if (veldenOk)
+            {
+                EnableDisableButtons(true);
+            }
+            else
+            {
+                EnableDisableButtons(false);
+            }
+        }
+
+        private void EnableDisableButtons( bool enable)
+        {
+            btnBlue.IsEnabled = enable;
+            btnGreen.IsEnabled = enable;
+            btnOrange.IsEnabled = enable;
+        }
+
+        private void ValidatieDeelnemer(Grid ouder)
+        {
+            foreach (Object control in ouder.Children)
+            {
+                if (control.GetType().ToString().Contains("TextBox"))
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.LostFocus += ControleDeelnemer;
+                }
+            }
+        }
+
+        private Deelnemer MaakDeelnemer( bool antwoord )
+        {
+            Deelnemer deelnemer = new Deelnemer();
+            deelnemer.Id = 0;
+            deelnemer.FirstName = txtFirstName.Text;
+            deelnemer.LastName = txtLastName.Text;
+            deelnemer.Email = txtEmail.Text;
+            deelnemer.Phone = txtPhone.Text;
+            deelnemer.Street = txtStreet.Text;
+            deelnemer.StreetNumber = Int32.Parse(txtStreetNumber.Text);
+            deelnemer.City = txtCity.Text;
+            deelnemer.PostalCode = Int32.Parse(txtPostalCode.Text);
+            deelnemer.Answer = antwoord.ToString();
+
+            return deelnemer;
+        }
+
         #region eventRegion
         private void btnOrange_Click(object sender, RoutedEventArgs e)
         {
-            //Vindt inderdaad de database file niet zoals jacques vermoedde
-            answer = true;
+            Deelnemer deelnemerTrue = MaakDeelnemer(true);
 
-            Deelnemer deelnemerTrue = new Deelnemer();
-            deelnemerTrue.Id = 0;
-            deelnemerTrue.FirstName = txtFirstName.Text;
-            deelnemerTrue.LastName = txtLastName.Text;
-            deelnemerTrue.Email = txtEmail.Text;
-            deelnemerTrue.Phone = long.Parse(txtPhone.Text);
-            deelnemerTrue.Street = txtStreet.Text;
-            deelnemerTrue.StreetNumber = Int32.Parse(txtStreetNumber.Text);
-            deelnemerTrue.City = txtCity.Text;
-            deelnemerTrue.PostalCode = Int32.Parse(txtPostalCode.Text);
-            deelnemerTrue.Answer = answer.ToString();
             if (!beheerDeelnemers.NieuwDeelnemer(deelnemerTrue))
             {
                 MessageBox.Show("Fout bij ingave, gegevens konden niet verwerkt worden");
@@ -73,25 +146,12 @@ namespace WpfApp5
                 MessageBox.Show("Bedankt voor je deelname!");
                 MaakVeldenDeelnemersLeeg();
             }
-
         }
 
 
         private void btnBlue_Click(object sender, RoutedEventArgs e)
         {
-            
-          
-            Deelnemer deelnemerFalse = new Deelnemer();
-            deelnemerFalse.Id = 0;
-            deelnemerFalse.FirstName = txtFirstName.Text;
-            deelnemerFalse.LastName = txtLastName.Text;
-            deelnemerFalse.Email = txtEmail.Text;
-            deelnemerFalse.Phone = long.Parse(txtPhone.Text);
-            deelnemerFalse.Street = txtStreet.Text;
-            deelnemerFalse.StreetNumber = Int32.Parse(txtStreetNumber.Text);
-            deelnemerFalse.City = txtCity.Text;
-            deelnemerFalse.PostalCode = Int32.Parse(txtPostalCode.Text);
-            deelnemerFalse.Answer = answer.ToString();
+            Deelnemer deelnemerFalse = MaakDeelnemer(false);
             if (!beheerDeelnemers.NieuwDeelnemer(deelnemerFalse))
             {
                 MessageBox.Show("Fout bij ingave, gegevens konden niet verwerkt worden");
@@ -106,19 +166,7 @@ namespace WpfApp5
 
         private void btnGreen_Click(object sender, RoutedEventArgs e)
         {
-            
-
-            Deelnemer deelnemerFalse = new Deelnemer();
-            deelnemerFalse.Id = 0;
-            deelnemerFalse.FirstName = txtFirstName.Text;
-            deelnemerFalse.LastName = txtLastName.Text;
-            deelnemerFalse.Email = txtEmail.Text;
-            deelnemerFalse.Phone = long.Parse(txtPhone.Text);
-            deelnemerFalse.Street = txtStreet.Text;
-            deelnemerFalse.StreetNumber = Int32.Parse(txtStreetNumber.Text);
-            deelnemerFalse.City = txtCity.Text;
-            deelnemerFalse.PostalCode = Int32.Parse(txtPostalCode.Text);
-            deelnemerFalse.Answer = answer.ToString();
+            Deelnemer deelnemerFalse = MaakDeelnemer(false);
             if (!beheerDeelnemers.NieuwDeelnemer(deelnemerFalse))
             {
                 MessageBox.Show("Fout bij ingave, gegevens konden niet verwerkt worden");
@@ -127,7 +175,7 @@ namespace WpfApp5
             else
             {
                 MessageBox.Show("Bedankt voor je deelname!");
-                MaakVeldenDeelnemersLeeg();
+                MaakVeldenDeelnemersLeeg();               
             }
         }
         #endregion

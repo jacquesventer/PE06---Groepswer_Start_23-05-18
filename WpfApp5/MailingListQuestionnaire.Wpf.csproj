@@ -97,6 +97,10 @@
     <Resource Include="Image1.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InputControl.Lib\InputControl.Lib.csproj">
+      <Project>{2d469b2d-bdd8-4d48-968e-b982e69d755e}</Project>
+      <Name>InputControl.Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MailingList.Lib\MailingList.Lib.csproj">
       <Project>{43691d9a-7807-4d2a-9399-48bc69492464}</Project>
       <Name>MailingList.Lib</Name>

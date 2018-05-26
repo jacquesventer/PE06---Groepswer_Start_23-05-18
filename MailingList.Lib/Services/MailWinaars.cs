@@ -44,7 +44,7 @@ namespace MailingList.Lib.Services
                     string FirstName = dbRead.GetString(1).ToString();
                     string LastName = dbRead.GetString(2).ToString();
                     string Email = dbRead.GetString(3).ToString();
-                    int Phone = dbRead.GetInt32(4);
+                    string Phone = dbRead.GetString(4);
                     string Street = dbRead.GetString(5).ToString();
                     int StreetNumber = dbRead.GetInt32(6);
                     string City = dbRead.GetString(7).ToString();

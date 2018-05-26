@@ -17,6 +17,7 @@ using MailingList.Lib.Entities;
 using MailingList.Lib.Services;
 using Email.Lib.Entities;
 using Email.Lib.Services;
+using InputControl.Lib;
 
 namespace MailingList.Wpf
 {
@@ -28,7 +29,7 @@ namespace MailingList.Wpf
         DeelnemerServices beheerDeelnemers = new DeelnemerServices();
         MailWinaars beheerWinaars = new MailWinaars();
         Deelnemer deelnemer_Sel;
-        //TextBoxControl beheerControls = new TextBoxControl();
+        TextBoxControl beheerControls = new TextBoxControl();
 
         public MainWindow()
         {
@@ -52,7 +53,6 @@ namespace MailingList.Wpf
             beheerWinaars.winnaars = new List<Deelnemer>();
             beheerWinaars.SelecteerWinaar();
             VulListWinnaars();
-
         }
         void DataOphalen()
         {
@@ -99,7 +99,7 @@ namespace MailingList.Wpf
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             
-            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, long.Parse(txtPhone.Text),
+            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text.ToString(),
                 txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.WijzigDeelnemer(participant))
             {
@@ -115,7 +115,7 @@ namespace MailingList.Wpf
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
             Deelnemer newparticipant = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text,
-                long.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
+                txtPhone.Text.ToString(), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.NieuwDeelnemer(newparticipant))
             {
                 MessageBox.Show("De gegevens zijn niet opgeslagen");
