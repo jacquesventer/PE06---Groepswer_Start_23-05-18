@@ -101,6 +101,7 @@ namespace MailingList.Lib.Services
             }
             winnaars = gesorteerd;
         }
+
         public string OpmaakEmail(Deelnemer winnaar)
         {
             string rapport = paragraph("Beste, <br>" + winnaar.LastName + " " + winnaar.FirstName);

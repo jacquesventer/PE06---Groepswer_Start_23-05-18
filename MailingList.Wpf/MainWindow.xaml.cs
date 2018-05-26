@@ -30,13 +30,14 @@ namespace MailingList.Wpf
         MailWinaars beheerWinaars = new MailWinaars();
         Deelnemer deelnemer_Sel;
         TextBoxControl beheerControls = new TextBoxControl();
+        SendMail zendMail = new SendMail();
 
         public MainWindow()
         {
             InitializeComponent();
             DataOphalen();
         }
-
+        #region 
         void VulList()
         {
             lstMailingList.ItemsSource = beheerDeelnemers.deelnemers;
@@ -53,6 +54,12 @@ namespace MailingList.Wpf
             beheerWinaars.winnaars = new List<Deelnemer>();
             beheerWinaars.SelecteerWinaar();
             VulListWinnaars();
+        }
+        void SelecteerWinaarList()
+        {
+            Random rd = new Random();
+            int indexWinnaar = rd.Next(0, beheerWinaars.winnaars.Count());
+            lstMailingList.SelectedIndex = indexWinnaar;
         }
         void DataOphalen()
         {
@@ -76,7 +83,8 @@ namespace MailingList.Wpf
             txtPostalCode.Clear();
             VulList();
         }
-            
+        #endregion
+
         #region eventRegion
         private void lstMailingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -146,14 +154,28 @@ namespace MailingList.Wpf
 
         private void btnSendNewsLetter_Click(object sender, RoutedEventArgs e)
         {
-          
+            foreach (Deelnemer mailDeelnemer in beheerDeelnemers.deelnemers)
+            {
+                string rapport = beheerWinaars.OpmaakEmail(mailDeelnemer);
+                rapport += txtNewsLetter.Text;
+                string from, to, subject, paswoord;
+                from = "groepsw56@gmail.com";
+                to = mailDeelnemer.Email;
+                subject = "Newsletter";
+                paswoord = "Huiswerk104";
+
+                MailingComponents _mailDeelnemer = new MailingComponents(from, to, subject, rapport, from, paswoord);
+
+                if (!SendMail.SendMessage(_mailDeelnemer))
+                {
+                    MessageBox.Show($"De e-mail is niet verzonden {_mailDeelnemer.To}");
+                }
+                txtNewsLetter.Clear();
+            }
+            MessageBox.Show("De e-mails zijn verzonden!");
+
         }
-        void SelecteerWinaarList()
-        {
-            Random rd = new Random();
-            int indexWinnaar = rd.Next(0, beheerWinaars.winnaars.Count());
-            lstMailingList.SelectedIndex = indexWinnaar;
-        }
+
         private void btnChooseWinner_Click(object sender, RoutedEventArgs e)
         {
             deelnemer_Sel = (Deelnemer)lstMailingList.SelectedValue;
@@ -165,8 +187,7 @@ namespace MailingList.Wpf
         private void btnSendWinnersMail_Click(object sender, RoutedEventArgs e)
         {
             Deelnemer winnaar = (Deelnemer)lstMailingList.SelectedValue;
-            SendMail zendMail = new SendMail();
-
+            
             string rapport = beheerWinaars.OpmaakEmail(winnaar);
             rapport += txtWinnersMail.Text;
             string from, to, subject, paswoord;
@@ -179,11 +200,11 @@ namespace MailingList.Wpf
 
             if (!SendMail.SendMessage(mailWinnaar))
             {
-                MessageBox.Show("De mail is niet verzonden");
+                MessageBox.Show("De e-mail is niet verzonden");
             }
             else
             {
-                MessageBox.Show("De mail is verzonden");
+                MessageBox.Show("De e-mail is verzonden");
             }
             txtWinnersMail.Clear();
         }

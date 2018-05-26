@@ -70,3 +70,5 @@ D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.exe
 D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.pdb
 C:\projects\ivo\PE6\WpfApp5\bin\Debug\InputControl.Lib.dll
 C:\projects\ivo\PE6\WpfApp5\bin\Debug\InputControl.Lib.pdb
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\InputControl.Lib.dll
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\InputControl.Lib.pdb

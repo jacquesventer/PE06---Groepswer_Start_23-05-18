@@ -98,3 +98,5 @@ D:\HBO5\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.exe
 D:\HBO5\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.pdb
 C:\projects\ivo\PE6\MailingList.Wpf\bin\Debug\InputControl.Lib.dll
 C:\projects\ivo\PE6\MailingList.Wpf\bin\Debug\InputControl.Lib.pdb
+D:\HBO5\Nieuwe map\MailingList.Wpf\bin\Debug\InputControl.Lib.dll
+D:\HBO5\Nieuwe map\MailingList.Wpf\bin\Debug\InputControl.Lib.pdb

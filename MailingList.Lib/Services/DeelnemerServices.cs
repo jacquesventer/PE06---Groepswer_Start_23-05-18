@@ -12,6 +12,7 @@ namespace MailingList.Lib.Services
     {
         string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "../../../MailingList.accdb";
         public List<Deelnemer> deelnemers;
+        public List<string> mailAdressen;
         OleDbConnection dbConn;
         OleDbCommand sqlCommand;
 
@@ -48,7 +49,7 @@ namespace MailingList.Lib.Services
                     deelnemers.Add(deelnemer);
                 }
                 gelukt = true;
-                
+
             }
             catch (Exception ex)
             {
@@ -64,9 +65,9 @@ namespace MailingList.Lib.Services
             }
             SorteerDeelnemers();
             return gelukt;
-            
-        }
 
+        }
+      
         public bool NieuwDeelnemer(Deelnemer deelnemer)
         {
             bool gelukt = false;
