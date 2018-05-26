@@ -47,6 +47,7 @@ namespace MailingList.Wpf
             beheerDeelnemers.deelnemers = new List<Deelnemer>();
             beheerDeelnemers.ImportData();
             VulList();
+            
         }
 
         void MaakVeldenDeelnemersLeeg()
