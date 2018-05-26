@@ -8,3 +8,15 @@ C:\projects\ivo\PE6\Email.Lib\bin\Debug\Email.Lib.pdb
 C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.csprojResolveAssemblyReference.cache
 C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.dll
 C:\projects\ivo\PE6\Email.Lib\obj\Debug\Email.Lib.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\bin\Debug\Email.Lib.dll
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\bin\Debug\Email.Lib.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\obj\Debug\Email.Lib.csprojAssemblyReference.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\obj\Debug\Email.Lib.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\obj\Debug\Email.Lib.dll
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\Email.Lib\obj\Debug\Email.Lib.pdb
+D:\HBO5\Nieuwe map\Email.Lib\bin\Debug\Email.Lib.dll
+D:\HBO5\Nieuwe map\Email.Lib\bin\Debug\Email.Lib.pdb
+D:\HBO5\Nieuwe map\Email.Lib\obj\Debug\Email.Lib.csprojAssemblyReference.cache
+D:\HBO5\Nieuwe map\Email.Lib\obj\Debug\Email.Lib.csproj.CoreCompileInputs.cache
+D:\HBO5\Nieuwe map\Email.Lib\obj\Debug\Email.Lib.dll
+D:\HBO5\Nieuwe map\Email.Lib\obj\Debug\Email.Lib.pdb

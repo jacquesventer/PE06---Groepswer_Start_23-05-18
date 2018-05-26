@@ -10,7 +10,7 @@ namespace MailingList.Lib.Services
 {
     public class MailWinaars
     {
-        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "MailingList.accdb";
+        string bestandsPad = AppDomain.CurrentDomain.BaseDirectory + "../../../MailingList.accdb";
         public List<Deelnemer> winnaars;
         OleDbConnection dbConn;
         OleDbCommand sqlCommand;
@@ -19,6 +19,7 @@ namespace MailingList.Lib.Services
         {
                 dbConn = new OleDbConnection();
                 dbConn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + bestandsPad;
+            winnaars = new List<Deelnemer>();
         }
 
 
@@ -31,7 +32,7 @@ namespace MailingList.Lib.Services
         {
             bool gelukt = false;
             OleDbDataReader dbRead = null;
-            string sqlopdracht = "select * FROM tblMailingList WHERE Answer = true ";
+            string sqlopdracht = "select * FROM tblMailingList WHERE Answer = 'true' ";
             try
             {
                 dbConn.Open();
@@ -66,7 +67,52 @@ namespace MailingList.Lib.Services
                 }
                 SluitConnectie();
             }
+            SorteerDeelnemers();
             return gelukt;
         }
+        string MaakSorteerSleutel(Deelnemer deelnemer)
+        {
+            string sorteerSleutel = "";
+            sorteerSleutel = deelnemer.LastName + "," + deelnemer.FirstName;
+            sorteerSleutel = sorteerSleutel.ToUpper();
+            sorteerSleutel = sorteerSleutel.Replace(' ', '\0');
+            return sorteerSleutel;
+        }
+
+        void SorteerDeelnemers()
+        {
+            List<string> teSorteren = new List<string>();
+            foreach (Deelnemer deelnemer in winnaars)
+            {
+                teSorteren.Add(MaakSorteerSleutel(deelnemer));
+            }
+            teSorteren.Sort();
+            List<Deelnemer> gesorteerd = new List<Deelnemer>();
+            foreach (string sorteerNaam in teSorteren)
+            {
+                foreach (Deelnemer _deelnemer in winnaars)
+                {
+                    if (sorteerNaam == MaakSorteerSleutel(_deelnemer))
+                    {
+                        gesorteerd.Add(_deelnemer);
+                        break;
+                    }
+                }
+            }
+            winnaars = gesorteerd;
+        }
+        public string OpmaakEmail(Deelnemer winnaar)
+        {
+            string rapport = paragraph("Beste, <br>" + winnaar.LastName + " " + winnaar.FirstName);
+            return rapport;
+
+        }
+
+        static string paragraph(string input)
+        {
+            string html = $"<p>{input}</p>";
+            return html;
+        }
+
     }
 }

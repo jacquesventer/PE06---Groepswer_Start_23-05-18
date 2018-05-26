@@ -12,7 +12,7 @@ namespace MailingList.Lib.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public int Phone { get; set; }
+        public long Phone { get; set; }
         public string Street { get; set; }
         public int StreetNumber { get; set; }
         public string City { get; set; }
@@ -22,7 +22,7 @@ namespace MailingList.Lib.Entities
 
     public Deelnemer() { }
 
-    public Deelnemer(int _id, string _firstName, string _lastName, string _email, int _phone,
+    public Deelnemer(int _id, string _firstName, string _lastName, string _email, long _phone,
         string _street, int _streetNumber, string _city, int _postalCode, string _answer)
     {
         Id = _id;
@@ -38,7 +38,7 @@ namespace MailingList.Lib.Entities
 
     }
 
-    public Deelnemer(int _id, string _firstName, string _lastName, string _email, int _phone,
+    public Deelnemer(int _id, string _firstName, string _lastName, string _email, long _phone,
         string _street, int _streetNumber, string _city, int _postalCode)
         {
             Id = _id;

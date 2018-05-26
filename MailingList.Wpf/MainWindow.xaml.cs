@@ -41,7 +41,19 @@ namespace MailingList.Wpf
             lstMailingList.ItemsSource = beheerDeelnemers.deelnemers;
             lstMailingList.Items.Refresh();
         }
+        void VulListWinnaars()
+        {
+            lstMailingList.ItemsSource = beheerWinaars.winnaars;
+            lstMailingList.Items.Refresh();
+        }
 
+        void DataOphalenWinnaars()
+        {
+            beheerWinaars.winnaars = new List<Deelnemer>();
+            beheerWinaars.SelecteerWinaar();
+            VulListWinnaars();
+
+        }
         void DataOphalen()
         {
             beheerDeelnemers.deelnemers = new List<Deelnemer>();
@@ -86,8 +98,8 @@ namespace MailingList.Wpf
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            //Syntax fout in update ik(Diego) heb nog niet gevonden waarom
-            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, Int32.Parse(txtPhone.Text),
+            
+            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, long.Parse(txtPhone.Text),
                 txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.WijzigDeelnemer(participant))
             {
@@ -103,7 +115,7 @@ namespace MailingList.Wpf
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
             Deelnemer newparticipant = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text,
-                Int32.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
+                long.Parse(txtPhone.Text), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
             if (!beheerDeelnemers.NieuwDeelnemer(newparticipant))
             {
                 MessageBox.Show("De gegevens zijn niet opgeslagen");
@@ -134,38 +146,34 @@ namespace MailingList.Wpf
 
         private void btnSendNewsLetter_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
         void SelecteerWinaarList()
         {
             Random rd = new Random();
             int indexWinnaar = rd.Next(0, beheerWinaars.winnaars.Count());
-            
-            beheerWinaars.winnaars = new List<Deelnemer>();
-            beheerWinaars.SelecteerWinaar();
-
-            lstMailingList.ItemsSource = beheerWinaars.winnaars;
-            lstMailingList.Items.Refresh();
             lstMailingList.SelectedIndex = indexWinnaar;
-
         }
         private void btnChooseWinner_Click(object sender, RoutedEventArgs e)
         {
-            //winnende deelnemers in list plaatsen dan met randonnummer deelnemer selecteren op index in de listindex zie void hierboven
-            //Ergens fout in de selectquery mensen met false answer komen ook in de list
+            deelnemer_Sel = (Deelnemer)lstMailingList.SelectedValue;
+            DataOphalenWinnaars();
             SelecteerWinaarList();
-
+            lblWinner.Content = deelnemer_Sel.LastName + " " + deelnemer_Sel.FirstName;
         }
 
         private void btnSendWinnersMail_Click(object sender, RoutedEventArgs e)
         {
             Deelnemer winnaar = (Deelnemer)lstMailingList.SelectedValue;
-            string rapport = txtWinnersMail.Text;
+            SendMail zendMail = new SendMail();
+
+            string rapport = beheerWinaars.OpmaakEmail(winnaar);
+            rapport += txtWinnersMail.Text;
             string from, to, subject, paswoord;
-            from = "E-MAILADRES";   //welk emaildres gebruiken? nog gedeelde gmailaccount maken? htmlbody weglaten door gebruik string en textbox?
+            from = "groepsw56@gmail.com"; 
             to = winnaar.Email;
             subject = "Gefeliciteerd!";
-            paswoord = "pswoord";
+            paswoord = "Huiswerk104";
 
             MailingComponents mailWinnaar = new MailingComponents(from, to, subject, rapport, from, paswoord);
 
@@ -173,6 +181,11 @@ namespace MailingList.Wpf
             {
                 MessageBox.Show("De mail is niet verzonden");
             }
+            else
+            {
+                MessageBox.Show("De mail is verzonden");
+            }
+            txtWinnersMail.Clear();
         }
         #endregion
 

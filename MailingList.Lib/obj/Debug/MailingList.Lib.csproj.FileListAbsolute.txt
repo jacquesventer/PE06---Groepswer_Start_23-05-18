@@ -15,3 +15,15 @@ C:\projects\ivo\PE6\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
 C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.csprojResolveAssemblyReference.cache
 C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.dll
 C:\projects\ivo\PE6\MailingList.Lib\obj\Debug\MailingList.Lib.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\bin\Debug\MailingList.Lib.dll
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\obj\Debug\MailingList.Lib.csprojAssemblyReference.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\obj\Debug\MailingList.Lib.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\obj\Debug\MailingList.Lib.dll
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\MailingList.Lib\obj\Debug\MailingList.Lib.pdb
+D:\HBO5\Nieuwe map\MailingList.Lib\bin\Debug\MailingList.Lib.dll
+D:\HBO5\Nieuwe map\MailingList.Lib\bin\Debug\MailingList.Lib.pdb
+D:\HBO5\Nieuwe map\MailingList.Lib\obj\Debug\MailingList.Lib.csprojAssemblyReference.cache
+D:\HBO5\Nieuwe map\MailingList.Lib\obj\Debug\MailingList.Lib.csproj.CoreCompileInputs.cache
+D:\HBO5\Nieuwe map\MailingList.Lib\obj\Debug\MailingList.Lib.dll
+D:\HBO5\Nieuwe map\MailingList.Lib\obj\Debug\MailingList.Lib.pdb

@@ -57,7 +57,7 @@ namespace WpfApp5
             deelnemerTrue.FirstName = txtFirstName.Text;
             deelnemerTrue.LastName = txtLastName.Text;
             deelnemerTrue.Email = txtEmail.Text;
-            deelnemerTrue.Phone = Int32.Parse(txtPhone.Text);
+            deelnemerTrue.Phone = long.Parse(txtPhone.Text);
             deelnemerTrue.Street = txtStreet.Text;
             deelnemerTrue.StreetNumber = Int32.Parse(txtStreetNumber.Text);
             deelnemerTrue.City = txtCity.Text;
@@ -79,14 +79,14 @@ namespace WpfApp5
 
         private void btnBlue_Click(object sender, RoutedEventArgs e)
         {
-            answer = false;
+            
           
             Deelnemer deelnemerFalse = new Deelnemer();
             deelnemerFalse.Id = 0;
             deelnemerFalse.FirstName = txtFirstName.Text;
             deelnemerFalse.LastName = txtLastName.Text;
             deelnemerFalse.Email = txtEmail.Text;
-            deelnemerFalse.Phone = Int32.Parse(txtPhone.Text);
+            deelnemerFalse.Phone = long.Parse(txtPhone.Text);
             deelnemerFalse.Street = txtStreet.Text;
             deelnemerFalse.StreetNumber = Int32.Parse(txtStreetNumber.Text);
             deelnemerFalse.City = txtCity.Text;
@@ -106,14 +106,14 @@ namespace WpfApp5
 
         private void btnGreen_Click(object sender, RoutedEventArgs e)
         {
-            answer = false;
+            
 
             Deelnemer deelnemerFalse = new Deelnemer();
             deelnemerFalse.Id = 0;
             deelnemerFalse.FirstName = txtFirstName.Text;
             deelnemerFalse.LastName = txtLastName.Text;
             deelnemerFalse.Email = txtEmail.Text;
-            deelnemerFalse.Phone = Int32.Parse(txtPhone.Text);
+            deelnemerFalse.Phone = long.Parse(txtPhone.Text);
             deelnemerFalse.Street = txtStreet.Text;
             deelnemerFalse.StreetNumber = Int32.Parse(txtStreetNumber.Text);
             deelnemerFalse.City = txtCity.Text;

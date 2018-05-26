@@ -32,3 +32,39 @@ C:\projects\ivo\PE6\WpfApp5\obj\Debug\MainWindow.baml
 C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.g.resources
 C:\projects\ivo\PE6\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
 C:\projects\ivo\PE6\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.GenerateResource.Cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\bin\Debug\WpfApp5.exe.config
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\bin\Debug\WpfApp5.exe
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\bin\Debug\WpfApp5.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\bin\Debug\MailingList.Lib.dll
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\bin\Debug\MailingList.Lib.pdb
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csprojAssemblyReference.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MainWindow.g.cs
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\App.g.cs
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MainWindow.baml
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5.g.resources
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.GenerateResource.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.CopyComplete
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5.exe
+D:\Visual Studio 2017\Source\PE06-Groepswerk\PE06---Groepswer_Start_23-05-18\WpfApp5\obj\Debug\WpfApp5.pdb
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\WpfApp5.exe.config
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\WpfApp5.exe
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\WpfApp5.pdb
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\MailingList.Lib.dll
+D:\HBO5\Nieuwe map\WpfApp5\bin\Debug\MailingList.Lib.pdb
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csprojAssemblyReference.cache
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MainWindow.g.cs
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\App.g.cs
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MainWindow.baml
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.g.resources
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.GenerateResource.cache
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.CoreCompileInputs.cache
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\MailingListQuestionnaire.Wpf.csproj.CopyComplete
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.exe
+D:\HBO5\Nieuwe map\WpfApp5\obj\Debug\WpfApp5.pdb
