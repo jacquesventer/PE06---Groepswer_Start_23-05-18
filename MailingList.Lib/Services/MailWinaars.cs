@@ -104,7 +104,7 @@ namespace MailingList.Lib.Services
 
         public string OpmaakEmail(Deelnemer winnaar)
         {
-            string rapport = paragraph("Beste, <br>" + winnaar.LastName + " " + winnaar.FirstName);
+            string rapport = paragraph("Beste, " + winnaar.LastName + " " + winnaar.FirstName);
             return rapport;
 
         }

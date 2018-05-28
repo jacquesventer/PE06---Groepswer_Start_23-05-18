@@ -253,8 +253,9 @@ namespace MailingList.Wpf
                 {
                     MessageBox.Show($"De e-mail is niet verzonden {_mailDeelnemer.To}");
                 }
-                txtNewsLetter.Clear();
+                
             }
+            txtNewsLetter.Clear();
             MessageBox.Show("De e-mails zijn verzonden!");
 
         }
@@ -290,6 +291,8 @@ namespace MailingList.Wpf
                 MessageBox.Show("De e-mail is verzonden");
             }
             txtWinnersMail.Clear();
+            MaakVeldenDeelnemersLeeg();
+            DataOphalen();
         }
         #endregion
 
