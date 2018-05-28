@@ -36,6 +36,9 @@ namespace MailingList.Wpf
         {
             InitializeComponent();
             DataOphalen();
+            SpecialeControls();
+            ValidatieDeelnemer();
+            MaakVeldenDeelnemersLeeg();
         }
         #region 
         void VulList()
@@ -82,8 +85,76 @@ namespace MailingList.Wpf
             txtCity.Clear();
             txtPostalCode.Clear();
             VulList();
+            deelnemer_Sel = null;
+            beheerControls.AlleTextBoxenNormaal();
+            EnableDisableButtons(false);
         }
+
+        void SpecialeControls()
+        {
+            beheerControls.nietLeeg = new List<TextBox>();
+            beheerControls.nietLeeg.Add(txtCity);
+            beheerControls.nietLeeg.Add(txtFirstName);
+            beheerControls.nietLeeg.Add(txtLastName);
+            beheerControls.nietLeeg.Add(txtPostalCode);
+            beheerControls.nietLeeg.Add(txtStreet);
+            beheerControls.nietLeeg.Add(txtStreetNumber);
+            beheerControls.SetupControleLeeg();
+
+            beheerControls.adresInput = new List<TextBox>();
+            beheerControls.adresInput.Add(txtEmail);
+            beheerControls.SetupControleEmailAdres();
+
+            beheerControls.intInput = new List<TextBox>();
+            beheerControls.intInput.Add(txtStreetNumber);
+            beheerControls.SetupControleInt();
+        }
+
+        private void ValidatieDeelnemer()
+        {
+            txtFirstName.LostFocus += ControleDeelnemer;
+            txtLastName.LostFocus += ControleDeelnemer;
+            txtCity.LostFocus += ControleDeelnemer;
+            txtPostalCode.LostFocus += ControleDeelnemer;
+            txtStreet.LostFocus += ControleDeelnemer;
+            txtStreetNumber.LostFocus += ControleDeelnemer;
+            txtEmail.LostFocus += ControleDeelnemer;
+        }
+
+        private void ControleDeelnemer(object sender, RoutedEventArgs e)
+        {
+            bool veldenOk = true;
+            int huisNr;
+
+            if (txtCity.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtFirstName.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtLastName.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtPostalCode.Text.Trim(" -".ToArray()) == "") veldenOk = false;
+            else if (txtStreet.Text == "") veldenOk = false;
+            else if (int.TryParse(txtStreetNumber.Text.ToString(), out huisNr) == false) veldenOk = false;
+            else if (beheerControls.CheckEmailAdres(txtEmail.Text.ToString()) == false) veldenOk = false;
+
+            if (veldenOk)
+            {
+                EnableDisableButtons(true);
+            }
+            else
+            {
+                btnSave.IsEnabled = false;
+            }
+        }
+
+        private void EnableDisableButtons(bool enable)
+        {
+            btnDelete.IsEnabled = enable;
+            btnSave.IsEnabled = enable;
+        }
+
+
         #endregion
+
+
+
 
         #region eventRegion
         private void lstMailingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -100,45 +171,56 @@ namespace MailingList.Wpf
                 txtStreetNumber.Text = deelnemer_Sel.StreetNumber.ToString();
                 txtCity.Text = deelnemer_Sel.City;
                 txtPostalCode.Text = deelnemer_Sel.PostalCode.ToString();
+                EnableDisableButtons(true);
             }
         }
         
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            
-            Deelnemer participant = new Deelnemer(Int32.Parse(lblId.Content.ToString()), txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text.ToString(),
-                txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
-            if (!beheerDeelnemers.WijzigDeelnemer(participant))
+
+            Deelnemer newDeelnemer = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text,txtStreet.Text,
+                int.Parse(txtStreetNumber.Text), txtCity.Text, int.Parse(txtPostalCode.Text));
+
+            if (lblId.Content.ToString() == "")
             {
-                MessageBox.Show("De wijzigingen zijn niet opgeslagen");
+                // een deelnemer toevoegen in mailinglist heeft een false antwoord
+                newDeelnemer.Answer = false.ToString();
+                if (beheerDeelnemers.NieuwDeelnemer(newDeelnemer) == false)
+                {
+                    MessageBox.Show("De wijzigingen zijn niet opgeslagen!!");
+                }
+                else
+                {
+                    MaakVeldenDeelnemersLeeg();
+                    VulList();
+                }
             }
             else
             {
-                MaakVeldenDeelnemersLeeg();
-                VulList();
+                newDeelnemer.Id = deelnemer_Sel.Id; // Id van constructor overrulen met de geselecteerd id
+                if (beheerDeelnemers.VeranderDeelnemer(newDeelnemer, deelnemer_Sel) == false)
+                {
+                    MessageBox.Show("De wijzigingen zijn niet opgeslagen!!");
+                }
+                else
+                {
+                    MaakVeldenDeelnemersLeeg();
+                    VulList();
+                }
             }
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
-            Deelnemer newparticipant = new Deelnemer(0, txtFirstName.Text, txtLastName.Text, txtEmail.Text,
-                txtPhone.Text.ToString(), txtStreet.Text, Int32.Parse(txtStreetNumber.Text), txtCity.Text, Int32.Parse(txtPostalCode.Text));
-            if (!beheerDeelnemers.NieuwDeelnemer(newparticipant))
-            {
-                MessageBox.Show("De gegevens zijn niet opgeslagen");
-            }
-            else
-            {
-                MaakVeldenDeelnemersLeeg();
-                txtFirstName.Focus();
-            }
-          
+            MaakVeldenDeelnemersLeeg();
+            txtFirstName.Focus();
+            deelnemer_Sel = null;
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (lblId.Content.ToString() != "")
+            if (lblId.Content.ToString() != "" && deelnemer_Sel != null)
             {
                 if (!beheerDeelnemers.VerwijderDeelnemer(deelnemer_Sel))
                 {

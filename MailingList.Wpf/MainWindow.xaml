@@ -19,7 +19,7 @@
             <ColumnDefinition Width="139*"/>
         </Grid.ColumnDefinitions>
 
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="635" Margin="38,107,0,0" VerticalAlignment="Top" Width="711" Grid.ColumnSpan="4"/>
+        <Border x:Name="brdMailingManager" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="635" Margin="38,107,0,0" VerticalAlignment="Top" Width="711" Grid.ColumnSpan="4"/>
 
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="6" Grid.Column="3" HorizontalAlignment="Left" Height="345" Margin="196,397,0,0" VerticalAlignment="Top" Width="659"/>
 
