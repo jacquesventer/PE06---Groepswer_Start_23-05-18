@@ -199,6 +199,7 @@ namespace MailingList.Wpf
             else
             {
                 newDeelnemer.Id = deelnemer_Sel.Id; // Id van constructor overrulen met de geselecteerd id
+                newDeelnemer.Answer = deelnemer_Sel.Answer;
                 if (beheerDeelnemers.VeranderDeelnemer(newDeelnemer, deelnemer_Sel) == false)
                 {
                     MessageBox.Show("De wijzigingen zijn niet opgeslagen!!");
