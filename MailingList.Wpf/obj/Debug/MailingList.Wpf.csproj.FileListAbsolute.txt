@@ -122,3 +122,25 @@ D:\HBO5\programmeren 17-18\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.
 D:\HBO5\programmeren 17-18\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CopyComplete
 D:\HBO5\programmeren 17-18\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.exe
 D:\HBO5\programmeren 17-18\Nieuwe map\MailingList.Wpf\obj\Debug\MailingList.Wpf.pdb
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\MailingList.Wpf.exe.config
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\MailingList.Wpf.exe
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\MailingList.Wpf.pdb
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\Email.Lib.dll
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\InputControl.Lib.dll
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\MailingList.Lib.dll
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\Email.Lib.pdb
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\InputControl.Lib.pdb
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\bin\Debug\MailingList.Lib.pdb
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.csprojAssemblyReference.cache
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MainWindow.g.cs
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\App.g.cs
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf_MarkupCompile.cache
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf_MarkupCompile.lref
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MainWindow.baml
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.g.resources
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.Properties.Resources.resources
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.GenerateResource.cache
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CoreCompileInputs.cache
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.csproj.CopyComplete
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.exe
+D:\HBO5\programmeren 17-18\PE06--GroepsWerk\MailingList.Wpf\obj\Debug\MailingList.Wpf.pdb
